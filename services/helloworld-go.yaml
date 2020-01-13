@@ -1,12 +1,9 @@
-apiVersion: serving.knative.dev/v1alpha1
+apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: __NAME__
-  namespace: default
 spec:
-  runLatest:
-    configuration:
-      revisionTemplate:
-        spec:
-          container:
-            image: __IMAGE__
+  template:
+    spec:
+      containers:
+      - image: __IMAGE__
