@@ -17,13 +17,6 @@ spec:
         - standalone
         command:
         - /home/admin/start.sh
-        env:
-        - name: CMDEngine
-          value: osscmd --id=__OSSID__ --key=__OSSKEY__
-            --host=oss-cn-shanghai.aliyuncs.com --thread_num=10 --check_md5=true downloadtodir
-            oss://nls-cloud-cn-shanghai/tts/service/4.9.9 /home/admin/nls-tts/disk/data.4.9.9
-        - name: app_engine_dataPath
-          value: /home/admin/nls-tts/disk/data.4.9.9
         image: __IMAGE__
         ports:
         - containerPort: 7707
